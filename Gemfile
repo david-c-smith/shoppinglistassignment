@@ -2,11 +2,10 @@ source 'https://rubygems.org'
 
 
 group :production do
-  gem 'pg'
+  gem 'sqlite3'
 end
 
 gem 'sqlite3'
-
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '~> 5.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
