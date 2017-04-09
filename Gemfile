@@ -5,6 +5,7 @@ group :production do
   gem 'sqlite3'
 end
 
+gem 'pg'
 gem 'sqlite3'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '~> 5.0'
