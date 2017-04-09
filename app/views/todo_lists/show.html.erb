@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<h2 class="todo_list_title"><%= @todo_list.title %></h2>
+<p class="todo_list_sub_title"><%= @todo_list.description %></p>
+
+<div id="todo_items_wrapper" style="text-align: center">
+	<%= render @todo_list.todo_items %>
+	<div id="form">
+		<%= render "todo_items/form" %>
+	</div>
+</div>
+
+<div class="links">
+	<%= link_to 'Edit', edit_todo_list_path(@todo_list), class: "btn btn-info btn-lg"%>
+	<%= link_to 'Delete', todo_list_path(@todo_list), class: "btn btn-warning btn-lg", method: :delete, data: { confirm: "Are you sure?" }
+ %>
+  <%= link_to "Back", todo_lists_path, class: "btn btn-danger btn-lg"%>
+</div>
