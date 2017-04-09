@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(version: 20170409025310) do
     t.integer  "todo_list_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.datetime "completed_at"
     t.index ["todo_list_id"], name: "index_todo_items_on_todo_list_id"
   end
 
