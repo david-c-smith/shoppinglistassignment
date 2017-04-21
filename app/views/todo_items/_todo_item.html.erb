@@ -1,9 +1,32 @@
-	<div class="todo_item">
-			<p><%= todo_item.content %> </p>
-		</div>
+<head>
+  <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js' %>
+  <%= javascript_include_tag 'https://code.jquery.com/ui/1.12.1/jquery-ui.js' %>
+  <%= javascript_include_tag 'http://code.jquery.com/ui/1.9.2/jquery-ui.js' %>
+  <script>
+      $( function() {
+          $( "#sortable" ).sortable();
+          $( "#sortable" ).disableSelection();
+      } );
+  </script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <style>
+    #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+    #sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
+    #sortable li span { position: absolute; margin-left: -1.3em; }
+  </style>
+</head>
 
+<div class="todo_item">
+<p><%= todo_item.content %> </p>
   <div class="trash">
     <%= link_to todo_list_todo_item_path(@todo_list, todo_item.id), method: :delete, data: { confirm: "Are you sure?" } do %>    <i style="color:white "class="fa fa-trash"></i>
+        </div>
+    <%end%>
+</div>
 
-  <% end %>
-  </div>
+
+
